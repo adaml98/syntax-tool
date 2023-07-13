@@ -1,0 +1,14 @@
+{
+  "name": "syntax-tool",
+  "version": "1.0.0",
+  "description": "A tool to provide users with basic commands and syntax for a specified language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Lindley",
+  "license": "ISC",
+  "bin": {  
+    "syntax": "./bin/index.js"  
+  }
+}
