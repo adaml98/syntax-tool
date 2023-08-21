@@ -4,6 +4,7 @@ const { description, version } = require("./package.json");
 const psql = require("./commands/psql");
 const js = require("./commands/javascript");
 const git = require("./commands/git");
+const gh = require("./commands/gh");
 const program = new Command();
 
 program
@@ -30,6 +31,13 @@ program
   .description("Git CLI commands")
   .action(() => {
     git();
+  });
+
+program
+  .command("gh")
+  .description("Github CLI commands")
+  .action(() => {
+    gh();
   });
 
 program.parse();
