@@ -3,6 +3,7 @@ const { Command } = require("commander");
 const { description, version } = require("./package.json");
 const psql = require("./commands/psql");
 const js = require("./commands/javascript");
+const git = require("./commands/git");
 const program = new Command();
 
 program
@@ -22,6 +23,13 @@ program
   .description("JS popular functions")
   .action(() => {
     js();
+  });
+
+program
+  .command("git")
+  .description("Git CLI commands")
+  .action(() => {
+    git();
   });
 
 program.parse();
